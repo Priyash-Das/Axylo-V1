@@ -1,6 +1,6 @@
 # 🤖 Axylo – Intelligent Voice-Controlled Desktop Agent 🧠🎙️
 
-> Axylo is a local **AI-powered voice assistant** that automates desktop tasks, performs live web research, generates intelligent content, assists with coding, and interacts via a GUI or voice. It integrates **Google Gemini**, desktop automation, speech processing, and async agent workflows for a seamless AI experience.
+> Axylo is a local **AI-powered voice assistant** that automates desktop tasks, performs live web research, generates intelligent content, assists with coding, and interacts via a GUI or voice. It integrates **Google Gemini**, desktop automation, speech processing, and async agent workflows for a seamless AI experience. 🧠🎙️
 
 ---
 ---
@@ -135,6 +135,7 @@ Create a `.env` file:
 GEMINI_API_KEY=YOUR_API_KEY
 GOOGLE_API_KEY=YOUR_API_KEY
 OPENAI_API_KEY=YOUR_API_KEY
+```
 
 ---
 ---
