@@ -7,15 +7,44 @@
 
 ## 📷 Preview
 
-![Agent](https://github.com/Priyash-Das/Photos/blob/main/Axylo-V1.png)
+![Agent](https://github.com/Priyash-Das/Photos/blob/main/Axylo-V1/Axylo-V1.png)
 
+---
 ---
 
 ## 📹 Video (DEMO)
 
-👉 [Watch the demo](https://drive.google.com/drive/folders/13gpdsU9U0ay3uw6riCDlWhv9uYRhSlI0?usp=sharing)
+👉 [Watch the demo clicl here](https://drive.google.com/drive/folders/13gpdsU9U0ay3uw6riCDlWhv9uYRhSlI0?usp=sharing)
 
+---
+---
 
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/Priyash-Das/Photos/blob/main/Axylo-V1/1.png" alt="User Profile" width="100%">
+      <p align="center"><b>Personalized User Profile</b><br>Manage user details for tailored AI responses.</p>
+    </td>
+    <td width="50%">
+      <img src="https://github.com/Priyash-Das/Photos/blob/main/Axylo-V1/3.png" alt="Chat Interface" width="100%">
+      <p align="center"><b>Standalone Chat UI</b><br>A dedicated window for text-based interaction.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/Priyash-Das/Photos/blob/main/Axylo-V1/4.png" alt="Diagnostics" width="100%">
+      <p align="center"><b>System Diagnostics</b><br>Self-check tool to verify API keys, mic, and dependencies.</p>
+    </td>
+    <td width="50%">
+      <img src="https://github.com/Priyash-Das/Photos/blob/main/Axylo-V1/2.png" alt="Smart Writer" width="100%">
+      <p align="center"><b>Smart Writer</b><br>Quick-action modal for AI-assisted content generation.</p>
+    </td>
+  </tr>
+</table>
+
+---
 ---
 
 ## 🚀 Key Features
