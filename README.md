@@ -5,6 +5,19 @@
 ---
 ---
 
+## 📷 Preview
+
+![CRUD Post App Like Quora Using REST]()
+
+---
+
+## 📹 Video (DEMO)
+
+👉 [Watch the demo](https://drive.google.com/drive/folders/13gpdsU9U0ay3uw6riCDlWhv9uYRhSlI0?usp=sharing)
+
+
+---
+
 ## 🚀 Key Features
 
 ### 🎙 Voice Interaction
