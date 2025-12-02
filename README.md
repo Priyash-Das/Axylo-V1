@@ -1,25 +1,26 @@
-# 🤖 Axylo – Intelligent Voice-Controlled Desktop Agent 🧠🎙️
-
-> Axylo is a local **AI-powered voice assistant** that automates desktop tasks, performs live web research, generates intelligent content, assists with coding, and interacts via a GUI or voice. It integrates **Google Gemini**, desktop automation, speech processing, and async agent workflows for a seamless AI experience. 🧠🎙️
-
+# 🤖 Axylo – Intelligent Voice-Controlled Desktop Agent 
 ---
+
+> Axylo is a local, fully offline-capable **AI concierge agent** that automates desktop tasks, performs live web research, generates intelligent content, assists with coding, and interacts naturally using **voice or GUI**.  
+It integrates **Google Gemini**, desktop automation, custom tools, and asynchronous agents for a seamless real-time AI experience. 🧠🎙️
+
 ---
 
 ## 📷 Preview
+---
 
 ![Agent](https://github.com/Priyash-Das/Photos/blob/main/Axylo-V1/Axylo-V1.png)
 
 ---
+
+## 📹 Video (Demo)
+
+👉 [ WATCH THE DEMO > CLICK HERE ](https://drive.google.com/drive/folders/13gpdsU9U0ay3uw6riCDlWhv9uYRhSlI0?usp=sharing)
+
 ---
 
-## 📹 Video (DEMO)
-
-👉 [Watch the demo clicl here](https://drive.google.com/drive/folders/13gpdsU9U0ay3uw6riCDlWhv9uYRhSlI0?usp=sharing)
-
+## 🖼 Screenshots
 ---
----
-
-## 📸 Screenshots
 
 <table>
   <tr>
@@ -28,13 +29,13 @@
       <p align="center"><b>Personalized User Profile</b><br>Manage user details for tailored AI responses.</p>
     </td>
     <td width="50%">
-      <img src="https://github.com/Priyash-Das/Photos/blob/main/Axylo-V1/3.png" alt="Chat Interface" width="100%">
+      <img src="https://github.com/Priyash-Das/Photos/blob/main/Axylo-V1/4.png" alt="Chat Interface" width="100%">
       <p align="center"><b>Standalone Chat UI</b><br>A dedicated window for text-based interaction.</p>
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <img src="https://github.com/Priyash-Das/Photos/blob/main/Axylo-V1/4.png" alt="Diagnostics" width="100%">
+      <img src="https://github.com/Priyash-Das/Photos/blob/main/Axylo-V1/3.png" alt="Diagnostics" width="100%">
       <p align="center"><b>System Diagnostics</b><br>Self-check tool to verify API keys, mic, and dependencies.</p>
     </td>
     <td width="50%">
@@ -45,49 +46,72 @@
 </table>
 
 ---
+
+## ⭐ Key Features
 ---
 
-## 🚀 Key Features
+## 1. Voice Interaction
+- Real-time speech input via `speech_recognition`
+- High-quality TTS via **Edge-TTS** and **gTTS**
+- **Voice typing** into Notepad or editors  
+- **Voice messaging** with guided metadata collection  
+- Auto-prevents microphone feedback when Axylo is speaking
 
-### 🎙 Voice Interaction
-- Real-time voice control using `speech_recognition`, `edge-tts`, and `gTTS`.
-- Handles **voice typing**, **messaging**, and **AI-powered smart writing**.
-- Prevents microphone interference when TTS is speaking.
+---
 
-### 🧠 LLM-Powered Automation
-- Leverages **Google Gemini 2.0 Flash** via `google-adk`.
-- Integrated **tool wrappers**:
-  - Open / Close apps
-  - Media & volume control
+## 2. LLM-Powered Automation (Gemini 2.0 Flash)
+- Integrated via `google-adk`
+- Structured tool-calling for:
+  - App launch/close
+  - Tab & scroll control
   - Intelligent web search
-  - Scroll & auto-scroll
-  - YouTube control
-  - Launch chatbot interface
-- Supports powerful sub-agents:
-  - `ResearchAgent` → in-depth content analysis
-  - `CodeAgent` → coding, refactoring, debugging
-
-### 🖥 Desktop Control
-- Dynamic app launch and closure with fuzzy matching.
-- Automated keyboard & media events using `pyautogui`.
-- Supports tab control and continuous scrolling.
-
-### 🔍 Smart Web Search
-- Live web queries via `EnhancedSearchEngine` (DuckDuckGo-based).
-- Summarized responses and deeper reasoning via sub-agents.
-
-### 📝 Document Handling
-- Voice typing in Notepad with spoken edit commands.
-- Smart AI writing with Gemini → auto-saves to DOCX or TXT.
-
-### 💬 GUI Chat Interface
-- Built with `customtkinter`.
-- Includes real-time logs, copyable AI responses, typing indicator, and quick actions.
+  - YouTube actions
+  - Media & volume control
+  - Code execution helpers
+- Supports internal sub-agents:
+  - **ResearchAgent** – deep content reasoning  
+  - **CodeAgent** – refactoring, debugging, code generation  
 
 ---
+
+## 3. Desktop Automation Tools
+- Fuzzy-matched app launcher & closer (`AppLauncher`)
+- Cursor, scroll, keyboard, and UI automation (`pyautogui`)
+- Works on Windows/macOS/Linux depending on system capabilities
+
+---
+
+## 4. Smart Web Search
+- DuckDuckGo-powered enhanced search engine
+- Auto-extracts text (via `trafilatura`)
+- Summaries + deeper reasoning from ResearchAgent
+
+---
+
+## 5. Document Handling & Smart Writing
+- Voice-typing into Notepad  
+- AI-generated articles, emails, ideas, and drafts  
+- Doc creation via `python-docx`  
+- Content auto-saved to `.docx` or `.txt`
+
+---
+
+## 6. Structured GUI Chat Interface
+Built using **CustomTkinter** with:
+- Modern dark UI  
+- Realtime message bubbles  
+- Copy button for AI replies  
+- Typing indicator  
+- Scrollable chat history  
+- Quick actions  
+- Agent status indicator  
+
+GUI script: `src/chatbot_ui.py`
+
 ---
 
 ## 📁 Project Structure
+---
 
 ```
 Agent
@@ -113,19 +137,29 @@ Agent
 ```
 
 ---
----
 
 ## 🔄 Workflow Overview
+---
 
-### 1️⃣ User Interaction
-- Via **voice (main)** or **GUI chat window**.
-- Commands like *“open chrome”, “scroll down”, “write an email”* trigger task-specific logic.
+### 1️. User Interaction
+Input sources:
+- Voice commands  
+- GUI chat messages  
 
-### 2️⃣ Agent Processing
-- Request is passed to `agent.py → create_axylo_agent()`.
-- Agent interprets intent based on structured **system prompt rules**.
+Examples:
+- “Open Chrome”
+- “Scroll down”
+- “Write an email”
+- “Search for AI news”
 
-### 3️⃣ Tool Execution
+### 2️. Agent Processing
+Handled inside `create_axylo_agent()`:
+
+- Interprets user intent  
+- Decides whether to respond directly or call tools  
+- Routes complex tasks to ResearchAgent / CodeAgent  
+
+### 3️. Tool Execution
 - Depending on request:
   - App control → `control_app_wrapper`
   - Web search → `intelligent_web_search_wrapper`
@@ -135,14 +169,14 @@ Agent
   - Typing → `start_voice_typing`
   - Messaging → `start_voice_messaging`
 
-### 4️⃣ Response Generation
+### 4️. Response Generation
 - Results returned from tools are sanitized and optimized for voice.
 - Agent creates final response (spoken or shown in GUI).
 
 ---
----
 
 ## 🧩 Built-In Agents
+---
 
 | Agent Name        | Purpose                                                                                                        |
 |-------------------|----------------------------------------------------------------------------------------------------------------|
@@ -152,9 +186,9 @@ Agent
 
 
 ---
----
 
 ## 🛠 Tools Available
+---
 
 | Component        | Tools                              |
 | ---------------- | ---------------------------------- |
@@ -165,11 +199,12 @@ Agent
 | Web Search       | EnhancedSearchEngine               |
 | File Output      | python-docx, txt                   |
 | Platform Control | subprocess, browser                |
+| System           | subprocess, platform               |
 
 ---
----
 
-## 📌 Configuration
+## ⚙ Configuration
+---
 
 Create a `.env` file:
 
@@ -178,6 +213,16 @@ GEMINI_API_KEY=YOUR_API_KEY
 GOOGLE_API_KEY=YOUR_API_KEY
 OPENAI_API_KEY=YOUR_API_KEY
 ```
+
+---
+
+## 📄 License
+Released under **CC BY 4.0 International**.
+
+---
+
+## 🏷 Citation
+Priyash Das. *Axylo – Desktop Agent for Intelligent Automation*. Kaggle, 2025.
 
 ---
 ---
